@@ -6,18 +6,29 @@
       contact me through my social media accounts.
     </p>
     <form
+      @submit.prevent="endEmail"
       v-scrollanimation
       name="send-mgs"
       method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <div class="inp">
-        <input type="hidden" name="form-name" value="ask-question" />
-        <input type="email" name="email" required placeholder="Email" />
-        <input type="text" name="subject" required placeholder="Subject" />
+        <input
+          v-model="email"
+          type="email"
+          name="email"
+          required
+          placeholder="Email"
+        />
+        <input
+          v-model="subject"
+          type="text"
+          name="subject"
+          required
+          placeholder="Subject"
+        />
       </div>
       <textarea
+        v-model="text"
         name="text"
         placeholder="Description"
         id=""
@@ -29,7 +40,28 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: null,
+      subject: null,
+      text: null,
+    };
+  },
+  methods: {
+    endEmail() {
+      if (
+        this.subject !== null &&
+        this.subject !== "" &&
+        this.text !== null &&
+        this.text !== ""
+      )
+        window.open(
+          `mailto:anasdhj608@gmail.com?subject=${this.subject}&body=${this.text}`
+        );
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 @import "@/assets/style.scss";
