@@ -7,13 +7,13 @@
     </p>
     <form
       v-scrollanimation
-      action=""
-      @submit.prevent
+      name="send-mgs"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
       <div class="inp">
+        <input type="hidden" name="form-name" value="ask-question" />
         <input type="email" name="email" required placeholder="Email" />
         <input type="text" name="subject" required placeholder="Subject" />
       </div>
