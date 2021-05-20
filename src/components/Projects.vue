@@ -36,6 +36,14 @@ export default {
   setup() {
     const projects = ref([
       {
+        title: "VACCINE TRACKER",
+        imgsrc: require("@/assets/vaccineTracker.png"),
+        desc:
+          "vaccination tracker, it's a website that tracks the process of covid-19 vaccination with many details(vaccine type, number of vaccinated people in every country...). build by : vue.js - vue router - vuex - sass - vue-chartkick. and API",
+        link: "https://vaccine-tracker-covide19.netlify.app/",
+        githublink: "https://github.com/Anaslbkh/vaccination-tracker",
+      },
+      {
         title: "LET'S TRAVEL MOROCCO",
         imgsrc: require("@/assets/letstravel.png"),
         desc:
@@ -43,14 +51,7 @@ export default {
         link: "https://lets-tavel-morocco.herokuapp.com/",
         githublink: "https://github.com/Anaslbkh/lets-travel",
       },
-      {
-        title: "VACCINE TRACKER",
-        imgsrc: require("@/assets/vaccineTracker.png"),
-        desc:
-          "vaccination tracker, it's a website that tracks the process of covid-19 vaccination with many details(vaccine type, number of vaccinated people in every country...). built using vue.js APIs sass",
-        link: "/",
-        githublink: "/",
-      },
+
       {
         title: "MOVIES APP WITH AUTH",
         imgsrc: require("@/assets/movie-app.png"),

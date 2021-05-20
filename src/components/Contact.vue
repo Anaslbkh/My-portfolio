@@ -9,8 +9,9 @@
       v-scrollanimation
       action=""
       @submit.prevent
-      method="POST"
+      method="post"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
       <div class="inp">
         <input type="email" name="email" required placeholder="Email" />
